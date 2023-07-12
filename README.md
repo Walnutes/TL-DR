@@ -12,11 +12,26 @@ Welcome to open issues or pull requests (recommended)
   
 - [[Unified-IO](https://arxiv.org/abs/2206.08916)] A Unified Model for Vision, Language, and Multi-Modal Tasks.[[demo](https://unified-io.allenai.org/)]
 
+  - 复杂的视觉任务常常因为输出的多样性而难以统一，但借助自然语言的灵活性或许可以提供一种可行的措施。
+  - 
+
+  
+
 - [[VisionLLM](https://arxiv.org/abs/2305.11175)] Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks[[demo](https://igpt.opengvlab.com/)]
 
-  - considers images as a kind of foreign language and converts them into token representations.
+  - Insights: considers images as a kind of foreign language and converts them into token representations.
 
-  ![image-20230712171136051](C:\Users\CharMier\AppData\Roaming\Typora\typora-user-images\image-20230712171136051.png)
+  - Summary:分别使用常规的图像编码器与文本编码器提取多层次的视觉特征和文本特征，通过交叉注意力机制将文本特征注入图像特征（即Language-Guided Image Tokenizer），再借助<embedding, position>形式的Image Token作为Query既提取语义信息也提取位置信息。在送入LLMs的解码器之前，为解决类别和位置token数量不足的问题，将<class>token与<position>token进行增广，前者丰富了视觉任务的输出而后者则将回归问题实际上转换为离散的分类问题。最后，通过统一输出格式示例来限制LLMs的输出是高度与任务契合的
+
+    `(e.g., “<cls> <x1> <y1> <x2> <y2>” for object detection, “<bos>” for image captioning)`
+
+  - 思考：该工作并没有提出任何新的模型，而是在现有预训练的模型基础上将图像与提示文本（与任务高度相关）进行融合，并在利用LLMs的decoder输出前统一格式。
+
+  - 训练代价：4$\times$8 A100，可更新参数是Backbone和D-DETR和LLM的LoRA的少量参数
+
+  - Rating: 创新性不高，所做的视觉任务不够多。但从本文章认识到计算机视觉任务可以分为Vision-only与Vision-Language，同时prompts中的<image>能否？
+
+  ![](C:\Users\CharMier\AppData\Roaming\Typora\typora-user-images\image-20230712171136051.png)
 
 ### Awesome-Vision-Transformers
 
