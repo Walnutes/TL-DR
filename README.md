@@ -4,6 +4,18 @@ Welcome to open issues or pull requests (recommended)
 
 ### Awesome-LMM4Vision
 
+- Preliminary: Visual problem solving：“**What is where?**“
+  - Vision-only
+    - Classification>What
+    - Detection->What+Where(object level)
+    - Segmentation->What+Where(pixel level)
+    - Restoration->What(pixel level)
+  - Vision-Language
+    - Grounding->**something** at **where**
+    - Caption->what+where+**action**
+    - Generation*->what+where+action
+  - Vision-others
+
 - [SPAE] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.
   
   - model non-linguistic modality as a language sequence that LLMs can comprehend
@@ -13,9 +25,10 @@ Welcome to open issues or pull requests (recommended)
 - [[Unified-IO](https://arxiv.org/abs/2206.08916)] A Unified Model for Vision, Language, and Multi-Modal Tasks.[[demo](https://unified-io.allenai.org/)]
 
   - 复杂的视觉任务常常因为输出的多样性而难以统一，但借助自然语言的灵活性或许可以提供一种可行的措施。
-  - 
+  - 借助LLMs进行多个视觉任务的共同学习（如[DetCLIPv2](https://arxiv.org/pdf/2304.04514.pdf)**交替使用**不同类型的数据如Detection、Grounding和Image-Text pair进行学习，分别赋予模型定位和对更广泛概念的认识，从而实现OVD），飞轮效应。
+  - 另外一个想法则是，选择一个足够具备挑战性的任务（例如[Hiera](https://arxiv.org/abs/2306.00989)则选取Mask Image Model来作为代表性任务训练自己所提出的transformer模型）
 
-  
+  - Insights：
 
 - [[VisionLLM](https://arxiv.org/abs/2305.11175)] Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks[[demo](https://igpt.opengvlab.com/)]
 
@@ -31,7 +44,7 @@ Welcome to open issues or pull requests (recommended)
 
   - Rating: 创新性不高，所做的视觉任务不够多。但从本文章认识到计算机视觉任务可以分为Vision-only与Vision-Language，同时prompts中的<image>能否？
 
-  ![](C:\Users\CharMier\AppData\Roaming\Typora\typora-user-images\image-20230712171136051.png)
+  ![](./figs/LLMVision.png)
 
 ### Awesome-Vision-Transformers
 
