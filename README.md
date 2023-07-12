@@ -5,10 +5,18 @@ Welcome to open issues or pull requests (recommended)
 ### Awesome-LMM4Vision
 
 - [SPAE] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.
+  
   - model non-linguistic modality as a language sequence that LLMs can comprehend
   - In contrast to the majority of VQ-VAE approaches, SPAE maps to an interpretable **discrete latent space**, i.e., words.
   - Dilation subsampler selects the positions for quantization
+  
 - [[Unified-IO](https://arxiv.org/abs/2206.08916)] A Unified Model for Vision, Language, and Multi-Modal Tasks.[[demo](https://unified-io.allenai.org/)]
+
+- [[VisionLLM](https://arxiv.org/abs/2305.11175)] Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks[[demo](https://igpt.opengvlab.com/)]
+
+  - considers images as a kind of foreign language and converts them into token representations.
+
+  ![image-20230712171136051](C:\Users\CharMier\AppData\Roaming\Typora\typora-user-images\image-20230712171136051.png)
 
 ### Awesome-Vision-Transformers
 
