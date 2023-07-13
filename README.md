@@ -1,13 +1,15 @@
 ## Collections of Paper Focused on LMM4Vision or ViTs.
 
-Welcome to open issues or pull requests (recommended)
+Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 ### Awesome-LMM4Vision
 
-- LMM的特殊之处
-  - 连续-离散表征的结合->扩展vocabulary
-  - 输出format
-  - 多任务联合训练->open-ended
+- 复杂的视觉任务常常因为输出的多样性而难以统一，但借助自然语言的灵活性或许可以提供一种可行的措施。
+- LMM's specialness 
+  - Combination of continuous and discrete representation -> Extend vocabulary
+  - LLMs' Chain of Thought and In context Learning: Output Format
+  - Open-Vocabulary Vision Multi-tasks Joint Training：借助LLMs进行多个视觉任务的共同学习（如[DetCLIPv2](https://arxiv.org/pdf/2304.04514.pdf)**交替使用**不同类型的数据如Detection、Grounding和Image-Text pair进行学习，分别赋予模型定位和对更广泛概念的认识，从而实现OVD），飞轮效应。
+  - 与之呼应的是分两阶段进行训练，首先选择一个足够具备挑战性的任务进行预训练（例如[Hiera](https://arxiv.org/abs/2306.00989)则选取Mask Image Model来作为代表性任务训练自己所提出的transformer模型）再多任务联合训练
 
 - Preliminary: Visual tasks：“**What is where?**"
   - I/O Modality
@@ -30,9 +32,6 @@ Welcome to open issues or pull requests (recommended)
   
 - [[Unified-IO](https://arxiv.org/abs/2206.08916)] A Unified Model for Vision, Language, and Multi-Modal Tasks.[[demo](https://unified-io.allenai.org/)]
 
-  - 复杂的视觉任务常常因为输出的多样性而难以统一，但借助自然语言的灵活性或许可以提供一种可行的措施。
-  - 借助LLMs进行多个视觉任务的共同学习（如[DetCLIPv2](https://arxiv.org/pdf/2304.04514.pdf)**交替使用**不同类型的数据如Detection、Grounding和Image-Text pair进行学习，分别赋予模型定位和对更广泛概念的认识，从而实现OVD），飞轮效应。
-  - 另外一个想法则是，选择一个足够具备挑战性的任务（例如[Hiera](https://arxiv.org/abs/2306.00989)则选取Mask Image Model来作为代表性任务训练自己所提出的transformer模型）
   - Insights：Seq2Seq model + 95 benchmark datasets，构建一个统一且有尽的 token-vocabulary将各种模态进行离散序列化
     - Text: Sentence Piece
     - Image(dense): 
@@ -46,13 +45,10 @@ Welcome to open issues or pull requests (recommended)
 
     `(e.g., “<cls> <x1> <y1> <x2> <y2>” for object detection, “<bos>” for image captioning)`
 
-  - 思考：该工作并没有提出任何新的模型，而是在现有预训练的模型基础上将图像与提示文本（与任务高度相关）进行融合，并在利用LLMs的decoder输出前统一格式。
-
   - 训练代价：4$\times$8 A100，可更新参数是Backbone和D-DETR和LLM的LoRA的少量参数
 
-  - Rating: 创新性不高，所做的视觉任务不够多。但从本文章认识到计算机视觉任务可以分为Vision-only与Vision-Language，同时prompts中的<image>能否？
-
-  ![](./figs/LLMVision.png)
+  
+![](./figs/LLMVision.png)
 
 ### Awesome-Vision-Transformers
 
