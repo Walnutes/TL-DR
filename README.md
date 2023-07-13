@@ -8,15 +8,15 @@ Welcome to open issues or pull requests (recommended)
   - Vision-only
     - Classification>What
     - Detection->What+Where(object level)
-    - Segmentation->What+Where(pixel level)
-    - Restoration->What(pixel level)
+    - Instance Segmentation->What+Where(pixel level)
+    - Image Restoration->What(pixel level)
   - Vision-Language
-    - Grounding->**something** at **where**
-    - Caption->what+where+**action**
-    - Generation*->what+where+action
+    - Visual Grounding->**something** at **where**
+    - Image Caption->what+where+**action**
+    - Image Generation*->what+where+action
   - Vision-others
 
-- [SPAE] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.
+- [[SPAE](http://arxiv.org/abs/2306.17842)] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.[[code](https://github.com/google-research/magvit/ projects/spae)]
   
   - model non-linguistic modality as a language sequence that LLMs can comprehend
   - In contrast to the majority of VQ-VAE approaches, SPAE maps to an interpretable **discrete latent space**, i.e., words.
@@ -28,7 +28,7 @@ Welcome to open issues or pull requests (recommended)
   - 借助LLMs进行多个视觉任务的共同学习（如[DetCLIPv2](https://arxiv.org/pdf/2304.04514.pdf)**交替使用**不同类型的数据如Detection、Grounding和Image-Text pair进行学习，分别赋予模型定位和对更广泛概念的认识，从而实现OVD），飞轮效应。
   - 另外一个想法则是，选择一个足够具备挑战性的任务（例如[Hiera](https://arxiv.org/abs/2306.00989)则选取Mask Image Model来作为代表性任务训练自己所提出的transformer模型）
 
-  - Insights：
+  - Insights：Seq2Seq model
 
 - [[VisionLLM](https://arxiv.org/abs/2305.11175)] Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks[[demo](https://igpt.opengvlab.com/)]
 
