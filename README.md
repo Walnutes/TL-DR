@@ -16,6 +16,10 @@ Welcome to open issues or pull requests (recommended)
     - Image Generation*->what+where+action
   - Vision-others
 
+- [[LENS](https://arxiv.org/pdf/2306.16410.pdf)]:Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language.[[code](https://github.com/ContextualAI/lens)]
+  
+  - Utilize completely frozen model to turn the input image into <Tags><Attributes><Captions>, followed by <question>
+  
 - [[SPAE](http://arxiv.org/abs/2306.17842)] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.[[code](https://github.com/google-research/magvit/ projects/spae)]
   
   - model non-linguistic modality as a language sequence that LLMs can comprehend
