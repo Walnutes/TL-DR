@@ -21,7 +21,7 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 - [[LENS](https://arxiv.org/pdf/2306.16410.pdf)]:Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language.[[code](https://github.com/ContextualAI/lens)]
   
-  - Utilize completely frozen model to turn the input image into <Tags><Attributes><Captions>, followed by <question>
+  - Utilize completely frozen model to turn the input image into `<Tags>``<Attributes>``<Captions>`, followed by `<question>`
   
 - [[SPAE](http://arxiv.org/abs/2306.17842)] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.[[code](https://github.com/google-research/magvit/ projects/spae)]
   
@@ -41,11 +41,9 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
   - Insights: 将图像视为一种“外语”，并将其转换为离散的token表征。
 
-  - Summary:分别使用常规的图像编码器与文本编码器提取多层次的视觉特征和文本特征，通过交叉注意力机制将文本特征注入图像特征（即Language-Guided Image Tokenizer），再借助<embedding, position>形式的Image Token作为Query既提取语义信息也提取位置信息。在送入LLMs的解码器之前，为解决类别和位置token数量不足的问题，将<class>token与<position>token进行增广，前者丰富了视觉任务的输出而后者则将回归问题实际上转换为离散的分类问题。最后，通过统一输出格式示例来限制LLMs的输出是高度与任务契合的
+  - Summary:分别使用常规的图像编码器与文本编码器提取多层次的视觉特征和文本特征，通过交叉注意力机制将文本特征注入图像特征（即Language-Guided Image Tokenizer），再借助`<embedding, position>`形式的Image Token作为`Query`既提取语义信息也提取位置信息。在送入LLMs的解码器之前，为解决类别和位置`token`数量不足的问题，将`<class>`与`<position>`进行增广，前者丰富了视觉任务的输出而后者则将回归问题实际上转换为离散的分类问题。最后，通过统一输出格式示例来限制LLMs的输出是高度与任务契合的(e.g., `<cls> <x1> <y1> <x2> <y2>`”for object detection, `<bos>` for image captioning)
 
-    `(e.g., “<cls> <x1> <y1> <x2> <y2>” for object detection, “<bos>” for image captioning)`
-
-  - 训练代价：4$\times$8 A100，可更新参数是Backbone和D-DETR和LLM的LoRA的少量参数
+  - 训练代价：`4$\times$8 A100，可更新参数是Backbone和D-DETR和LLM的LoRA的少量参数
 
   
 ![](./figs/LLMVision.png)
