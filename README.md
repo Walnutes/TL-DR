@@ -1,24 +1,50 @@
-## Collections of Paper Focused on LMM4Vision or ViTs.
+# Collections of Paper Focused on LMM4Vision or ViTs.
 
 Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
-### Awesome-LMM4Vision
+[TOC]
+
+## 1. Awesome-LMM4Vision
+
+### 1.1 Rethinking
+
+#### 1.1.1 Motivation
 
 - 复杂的视觉任务常常因为输出的多样性而难以统一，但借助自然语言的灵活性或许可以提供一种可行的措施。
-- LMM's specialness 
-  - Combination of continuous and discrete representation -> Extend vocabulary
-  - LLMs' Chain of Thought and In context Learning: Output Format
-  - Open-Vocabulary Vision Multi-tasks Joint Training：借助LLMs进行多个视觉任务的共同学习（如[DetCLIPv2](https://arxiv.org/pdf/2304.04514.pdf)**交替使用**不同类型的数据如Detection、Grounding和Image-Text pair进行学习，分别赋予模型定位和对更广泛概念的认识，从而实现OVD），飞轮效应。
-  - 与之呼应的是分两阶段进行训练，首先选择一个足够具备挑战性的任务进行预训练（例如[Hiera](https://arxiv.org/abs/2306.00989)则选取Mask Image Model来作为代表性任务训练自己所提出的transformer模型）再多任务联合训练
+- 写作可以借鉴的术语：modality disconnect and task disconnect
+- 若视觉任务的输出可以通过语言符号（文本、数字）来统一的表示，则可以很自然的将图像特征编码同文本编码经过处理后同等看待的喂入LLMs的解码器即可；若为底层视觉任务或生成任务，那么文本信息更多扮演的是指令的角色，借鉴CLIPDraw中的思想就是正负提示词
 
+#### 1.1.2 Training
+
+- Open-Vocabulary Vision Multi-tasks Joint Training：借助LLMs进行多个视觉任务的共同学习（如[DetCLIPv2](https://arxiv.org/pdf/2304.04514.pdf)**交替使用**不同类型的数据如Detection、Grounding和Image-Text pair进行学习，分别赋予模型定位和对更广泛概念的认识，从而实现OVD），飞轮效应。
+- 与之呼应的是分两阶段进行训练，首先选择一个足够具备挑战性的任务进行预训练（例如[Hiera](https://arxiv.org/abs/2306.00989)则选取Mask Image Model来作为代表性任务训练自己所提出的transformer模型）再多任务联合训练
+
+#### 1.1.3 Question
+
+- Consistency of Reasoning: Vision中连贯形式图像（漫画、视频）的合成，同样可看作一种离散的表达。
+
+### 1.2 LMM's specialness 
+
+- Interactive
+- Combination of continuous and discrete representation -> Extend vocabulary
+- LLMs' Chain of Thought and In context Learning: Output Format
 - Preliminary: Visual tasks：“**What is where?**"
   - I/O Modality
     - Vision-only: Classification, Synthesis* 
     - **Vision-Language**: Captioning, VQA, Image Retrieval, Synthesis* 
   - Dense or Sparse: Segmentation, Grounding, Estimation* /Detection
 
-- 若视觉任务的输出可以通过语言符号（文本、数字）来统一的表示，则可以很自然的将图像特征编码同文本编码经过处理后同等看待的喂入LLMs的解码器即可；若为底层视觉任务或生成任务，那么文本信息更多扮演的是指令的角色，借鉴CLIPDraw中的思想就是正负提示词
+### 1.3 Papers
 
+- [[MM-CoT](https://arxiv.org/pdf/2302.00923.pdf)] Multimodal Chain-of-Thought Reasoning in Language Models. [[code](https://github.com/amazon-science/mm-cot
+  )]
+  
+- [[ChatGenImage](http://arxiv.org/abs/2305.12799)]Interactive Data Synthesis for Systematic Vision Adaptation via LLMs-AIGCs Collaboration.[code]
+  
+- [[Img2LLM-VQA](https://arxiv.org/pdf/2212.10846.pdf)]From Images to Textual Prompts: Zero-shot Visual Question Answering with Frozen Large Language Models.[[code](https://github.com/salesforce/LAVIS/tree/main/projects/img2llm-vqa)]
+  
+  - 
+  
 - [[LENS](https://arxiv.org/pdf/2306.16410.pdf)]:Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language.[[code](https://github.com/ContextualAI/lens)]
   
   - Utilize completely frozen model to turn the input image into `<Tags>``<Attributes>``<Captions>`, followed by `<question>`
@@ -46,11 +72,12 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
   - 训练代价：4$\times$8 A100，可更新参数是Backbone和D-DETR和LLM的LoRA的少量参数
 
   
+
 ![](./figs/LLMVision.png)
 
-### Awesome-Vision-Transformers
+## 2. Awesome-Vision-Transformers
 
-#### CVPR 2023
+### 2.1 CVPR 2023
 
 - [[Castiling-ViT](https://openaccess.thecvf.com/content/CVPR2023/papers/You_Castling-ViT_Compressing_Self-Attention_via_Switching_Towards_Linear-Angular_Attention_at_Vision_CVPR_2023_paper.pdf)] Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference. [[code](https://www.haoranyou.com/castling-vit/)]
   - Linear-Angular Attention to measuring spectral similarity
