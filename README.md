@@ -4,17 +4,18 @@ Welcome to open issues or pull requests (recommended)
 
 ### Awesome-LMM4Vision
 
-- Preliminary: Visual problem solving：“**What is where?**“
-  - Vision-only
-    - Classification>What
-    - Detection->What+Where(object level)
-    - Instance Segmentation->What+Where(pixel level)
-    - Image Restoration->What(pixel level)
-  - Vision-Language
-    - Visual Grounding->**something** at **where**
-    - Image Caption->what+where+**action**
-    - Image Generation*->what+where+action
-  - Vision-others
+- LMM的特殊之处
+  - 连续-离散表征的结合->扩展vocabulary
+  - 输出format
+  - 多任务联合训练->open-ended
+
+- Preliminary: Visual tasks：“**What is where?**"
+  - I/O Modality
+    - Vision-only: Classification, Synthesis* 
+    - **Vision-Language**: Captioning, VQA, Image Retrieval, Synthesis* 
+  - Dense or Sparse: Segmentation, Grounding, Estimation* /Detection
+
+- 若视觉任务的输出可以通过语言符号（文本、数字）来统一的表示，则可以很自然的将图像特征编码同文本编码经过处理后同等看待的喂入LLMs的解码器即可；若为底层视觉任务或生成任务，那么文本信息更多扮演的是指令的角色，借鉴CLIPDraw中的思想就是正负提示词
 
 - [[LENS](https://arxiv.org/pdf/2306.16410.pdf)]:Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language.[[code](https://github.com/ContextualAI/lens)]
   
@@ -39,7 +40,7 @@ Welcome to open issues or pull requests (recommended)
 
 - [[VisionLLM](https://arxiv.org/abs/2305.11175)] Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks[[demo](https://igpt.opengvlab.com/)]
 
-  - Insights: considers images as a kind of foreign language and converts them into token representations.
+  - Insights: 将图像视为一种“外语”，并将其转换为离散的token表征。
 
   - Summary:分别使用常规的图像编码器与文本编码器提取多层次的视觉特征和文本特征，通过交叉注意力机制将文本特征注入图像特征（即Language-Guided Image Tokenizer），再借助<embedding, position>形式的Image Token作为Query既提取语义信息也提取位置信息。在送入LLMs的解码器之前，为解决类别和位置token数量不足的问题，将<class>token与<position>token进行增广，前者丰富了视觉任务的输出而后者则将回归问题实际上转换为离散的分类问题。最后，通过统一输出格式示例来限制LLMs的输出是高度与任务契合的
 
