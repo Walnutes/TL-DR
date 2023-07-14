@@ -39,17 +39,21 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 - [[MM-CoT](https://arxiv.org/pdf/2302.00923.pdf)] Multimodal Chain-of-Thought Reasoning in Language Models. [[code](https://github.com/amazon-science/mm-cot
   )]
   
+  
+  
 - [[ChatGenImage](http://arxiv.org/abs/2305.12799)]Interactive Data Synthesis for Systematic Vision Adaptation via LLMs-AIGCs Collaboration.[code]
   
 - [[Img2LLM-VQA](https://arxiv.org/pdf/2212.10846.pdf)]From Images to Textual Prompts: Zero-shot Visual Question Answering with Frozen Large Language Models.[[code](https://github.com/salesforce/LAVIS/tree/main/projects/img2llm-vqa)]
-  
-  - 
-  
+
+  <img src="./figs/Img2LLM.png" style="zoom:50%;" />
+
 - [[LENS](https://arxiv.org/pdf/2306.16410.pdf)]:Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language.[[code](https://github.com/ContextualAI/lens)]
   
   - Utilize completely frozen model to turn the input image into `<Tags>``<Attributes>``<Captions>`, followed by `<question>`
   
 - [[SPAE](http://arxiv.org/abs/2306.17842)] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.[[code](https://github.com/google-research/magvit/ projects/spae)]
+  
+  <img src="./figs/SPAE.png" style="zoom:67%;" />
   
   - model non-linguistic modality as a language sequence that LLMs can comprehend
   - In contrast to the majority of VQ-VAE approaches, SPAE maps to an interpretable **discrete latent space**, i.e., words.
