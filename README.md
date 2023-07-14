@@ -38,18 +38,30 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 - [[MM-CoT](https://arxiv.org/pdf/2302.00923.pdf)] Multimodal Chain-of-Thought Reasoning in Language Models. [[code](https://github.com/amazon-science/mm-cot
   )]
+
+  <img src="./figs/MM-CoT.png" style="zoom:67%;" />
+
+- [[ChatGenImage](http://arxiv.org/abs/2305.12799)]Interactive Data Synthesis for Systematic Vision Adaptation via LLMs-AIGCs Collaboration.[[code](https://github.com/Yuqifan1117/Labal-Anything-Pipeline)]
   
+  - a new paradigm of annotated data expansion
+  - how LLMs communicate with AIGC model
   
-  
-- [[ChatGenImage](http://arxiv.org/abs/2305.12799)]Interactive Data Synthesis for Systematic Vision Adaptation via LLMs-AIGCs Collaboration.[code]
+  ![](./figs/ChatImgGen.png)
   
 - [[Img2LLM-VQA](https://arxiv.org/pdf/2212.10846.pdf)]From Images to Textual Prompts: Zero-shot Visual Question Answering with Frozen Large Language Models.[[code](https://github.com/salesforce/LAVIS/tree/main/projects/img2llm-vqa)]
 
-  <img src="./figs/Img2LLM.png" style="zoom:50%;" />
+  - zero-shot VQA tasks
+  - Image-grounded Text Encoder (ITE) in BLIP
+
+  <img src="./figs/Img2LLM.png" style="zoom:100%;" />
+
+  <img src="./figs/Img2LLM-01.png" style="zoom:100%;" />
 
 - [[LENS](https://arxiv.org/pdf/2306.16410.pdf)]:Towards Language Models That Can See: Computer Vision Through the LENS of Natural Language.[[code](https://github.com/ContextualAI/lens)]
   
-  - Utilize completely frozen model to turn the input image into `<Tags>``<Attributes>``<Captions>`, followed by `<question>`
+  - Utilize completely frozen model to turn the input image into `<Tags>``<Attributes>``<Captions>`, followed by `<question>` 
+  
+  ![](./figs/LENS.png)
   
 - [[SPAE](http://arxiv.org/abs/2306.17842)] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.[[code](https://github.com/google-research/magvit/ projects/spae)]
   
@@ -64,8 +76,10 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
   - Insights：Seq2Seq model + 95 benchmark datasets，构建一个统一且有尽的 token-vocabulary将各种模态进行离散序列化
     - Text: Sentence Piece
-    - Image(dense): 
+    - Image(dense)
   - 训练代价：搭建了71 million to 2.9 billion四种不同大小的模型，首先使用无监督的文本、图像和文本图像对的损失进行预训练，接着使用多个任务进行联合训练。
+
+  ![](./figs/Unified-IO.png)
 
 - [[VisionLLM](https://arxiv.org/abs/2305.11175)] Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks[[demo](https://igpt.opengvlab.com/)]
 
