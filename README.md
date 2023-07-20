@@ -63,7 +63,7 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
   
   ![](./figs/LENS.png)
   
-- [[SPAE](http://arxiv.org/abs/2306.17842)] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.[[code](https://github.com/google-research/magvit/ projects/spae)]
+- [[SPAE](http://arxiv.org/abs/2306.17842)] Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs.[[code](https://github.com/google-research/magvit/projects/spae)]
   
   <img src="./figs/SPAE.png" style="zoom:67%;" />
   
@@ -110,6 +110,7 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
   - Linear-Angular Attention to measuring spectral similarity
 - [[HGFormer](https://openaccess.thecvf.com/content/CVPR2023/papers/Ding_HGFormer_Hierarchical_Grouping_Transformer_for_Domain_Generalized_Semantic_Segmentation_CVPR_2023_paper.pdf)]Hierarchical Grouping Transformer for Domain Generalized Semantic Segmentation [[code](https://github.com/dingjiansw101/HGFormer)]
 - [[Token Labeling](https://proceedings.neurips.cc/paper/2021/hash/9a49a25d845a483fae4be7e341368e36-Abstract.html)]All Tokens Matter: Token Labeling for Training Better Vision Transformers[[code](https://github.com/zihangJiang/TokenLabeling)]
+- [[MAGVIT](https://arxiv.org/abs/2212.05199)] Masked Generative Video Transformer. [[code](https://github.com/google-research/magvit)]
 
 ---
 
