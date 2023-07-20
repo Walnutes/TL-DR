@@ -93,12 +93,50 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 ![](./figs/LLMVision.png)
 
+---
+
+- 
+
 ## 2. Awesome-Vision-Transformers
 
 ### 2.1 CVPR 2023
 
+---
+
+#### 2.1.1 Vision Transformer
+
+
 - [[Castiling-ViT](https://openaccess.thecvf.com/content/CVPR2023/papers/You_Castling-ViT_Compressing_Self-Attention_via_Switching_Towards_Linear-Angular_Attention_at_Vision_CVPR_2023_paper.pdf)] Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference. [[code](https://www.haoranyou.com/castling-vit/)]
   - Linear-Angular Attention to measuring spectral similarity
-
 - [[HGFormer](https://openaccess.thecvf.com/content/CVPR2023/papers/Ding_HGFormer_Hierarchical_Grouping_Transformer_for_Domain_Generalized_Semantic_Segmentation_CVPR_2023_paper.pdf)]Hierarchical Grouping Transformer for Domain Generalized Semantic Segmentation [[code](https://github.com/dingjiansw101/HGFormer)]
+- [[Token Labeling](https://proceedings.neurips.cc/paper/2021/hash/9a49a25d845a483fae4be7e341368e36-Abstract.html)]All Tokens Matter: Token Labeling for Training Better Vision Transformers[[code](https://github.com/zihangJiang/TokenLabeling)]
 
+---
+
+#### 2.1.2 Forgery
+
+
+- [[AUNet](https://openaccess.thecvf.com/content/CVPR2023/html/Bai_AUNet_Learning_Relations_Between_Action_Units_for_Face_Forgery_Detection_CVPR_2023_paper.html)]Learning Relations Between Action Units for Face Forgery Detection[[code](https://github.com/wmbai/AUNet)]
+- [[ERMPC](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_Edge-Aware_Regional_Message_Passing_Controller_for_Image_Forgery_Localization_CVPR_2023_paper.pdf)]Edge-Aware Regional Message Passing Controller for Image Forgery Localization[code]
+- [[TruFor](https://openaccess.thecvf.com/content/CVPR2023/html/Guillaro_TruFor_Leveraging_All-Round_Clues_for_Trustworthy_Image_Forgery_Detection_and_CVPR_2023_paper.html)]Leveraging All-Round Clues for Trustworthy Image Forgery Detection and Localization[[code](https://grip-unina.github.io/TruFor/)]
+- [[Diffusion Art or Digital Forgery?]](https://arxiv.org/pdf/2212.03860.pdf) Investigating Data Replication in Diffusion Models. [code]
+- [[AltFreezing](https://arxiv.org/pdf/2307.08317.pdf)]for More General Video Face Forgery Detection. [[code](https://github.com/ZhendongWang6/AltFreezing)]
+- [[IFDL](https://arxiv.org/abs/2303.17111)]Hierarchical Fine-Grained Image Forgery Detection and Localization.[[code](https://github.com/CHELSEA234/HiFi_IFDL)]
+
+#### 2.1.3 MAE
+
+- [[GAN-MAE](https://feizc.github.io/resume/ganmae.pdf)] Masked Auto-Encoders Meet Generative Adversarial Networks and Beyond [code]
+
+## Reference
+
+- [ICLR2023](https://openreview.net/group?id=ICLR.cc/2023/Conference)
+- [CVPR2023](https://cvpr2023.thecvf.com/Conferences/2023/AcceptedPapers)
+- [CVPRW2023](https://openaccess.thecvf.com/CVPR2023_workshops/menu)
+- [WACV2023](https://openaccess.thecvf.com/WACV2023)
+- [IJCAI2023](https://ijcai-23.org/main-track-accepted-papers/)
+- [ECCV2022](https://eccv2022.ecva.net/program/accepted-papers/)
+- [MM-2022-Proceedings](https://dl.acm.org/doi/proceedings/10.1145/3503161) 
+- [SIGGRAPH2023](https://kesen.realtimerendering.com/sig2023.html)
+- [ICML2022](https://dblp.org/db/conf/icml/icml2022.html)
+- [AAAI2022](https://dblp.org/db/conf/aaai/aaai2022.html)
+- [TIFS](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)
