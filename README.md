@@ -93,9 +93,7 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 ![](./figs/LLMVision.png)
 
----
 
-- 
 
 ## 2. Awesome-Vision-Transformers
 
@@ -127,6 +125,39 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 #### 2.1.3 MAE
 
 - [[GAN-MAE](https://feizc.github.io/resume/ganmae.pdf)] Masked Auto-Encoders Meet Generative Adversarial Networks and Beyond [code]
+
+### 2.2 Preprint
+
+#### 2.1.1 Vision Transformer
+
+#### 2.1.2 Forgery
+
+- [[DADF](http://arxiv.org/abs/2306.17075)]:Detect Any Deepfakes: Segment Anything Meets Face Forgery Detection and Localization[[code](https://github.com/laiyingxin2/DADF)]
+
+  ![](./figs/dadf.png)
+
+  - an image encoder with the Multiscale Adapters for feature extraction
+
+    - freezing SAM
+    - 可学习多尺寸卷积微调参数
+
+  - a Reconstruction Guided Attention (RGA) module for forged feature refinement
+
+    - 引入高斯白噪声来模拟篡改人脸图像
+
+    - 同样经过编码器后视为重建图像$F^{Gau}$，与原图$F$相减，送入enhancer（$1\times1\ Conv$）+ softmax (attention map)，同时这里也提供一个重建损失监督信号，<font color=red>这里似乎有些矛盾，期望重建损失小，但$S$也会因此变小，得到的attn map也会因此不明显（？），猜测这里的残差连接会十分重要</font>
+
+    - <font color=red>相当于前向传播两次，效率不高；噪声水平不高；编码器相当于一次处理两个任务；讲故事成分大一些</font>
+
+  - a mask decoder for forgery mask prediction
+
+- [[LASTED](http://arxiv.org/abs/2305.13800)]:Generalizable Synthetic Image Detection via Language-guided Contrastive Learning[[code](https://github.com/HighwayWu/LASTED)]
+
+  - 词汇：heightened, malevolent, dissemination, authenticity, forensic,speculate
+  - augment the training images with carefully-designed textual labels
+  - <font color=red>language supervision</font>，有点prompt engineer的感觉，<font color=red>但却说明指定图像的类型是有必要的</font>>
+
+#### 2.1.3 MAE
 
 ## Reference
 
