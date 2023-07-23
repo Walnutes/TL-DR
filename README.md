@@ -116,11 +116,18 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 
 - [[AUNet](https://openaccess.thecvf.com/content/CVPR2023/html/Bai_AUNet_Learning_Relations_Between_Action_Units_for_Face_Forgery_Detection_CVPR_2023_paper.html)]Learning Relations Between Action Units for Face Forgery Detection[[code](https://github.com/wmbai/AUNet)]
+
 - [[ERMPC](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_Edge-Aware_Regional_Message_Passing_Controller_for_Image_Forgery_Localization_CVPR_2023_paper.pdf)]Edge-Aware Regional Message Passing Controller for Image Forgery Localization[code]
+
 - [[TruFor](https://openaccess.thecvf.com/content/CVPR2023/html/Guillaro_TruFor_Leveraging_All-Round_Clues_for_Trustworthy_Image_Forgery_Detection_and_CVPR_2023_paper.html)]Leveraging All-Round Clues for Trustworthy Image Forgery Detection and Localization[[code](https://grip-unina.github.io/TruFor/)]
+
 - [[Diffusion Art or Digital Forgery?]](https://arxiv.org/pdf/2212.03860.pdf) Investigating Data Replication in Diffusion Models. [code]
+
 - [[AltFreezing](https://arxiv.org/pdf/2307.08317.pdf)]for More General Video Face Forgery Detection. [[code](https://github.com/ZhendongWang6/AltFreezing)]
-- [[IFDL](https://arxiv.org/abs/2303.17111)]Hierarchical Fine-Grained Image Forgery Detection and Localization.[[code](https://github.com/CHELSEA234/HiFi_IFDL)]
+
+- [[HiFi-IFDL](https://arxiv.org/abs/2303.17111)]Hierarchical Fine-Grained Image Forgery Detection and Localization.[[code](https://github.com/CHELSEA234/HiFi_IFDL)]
+
+  
 
 #### 2.1.3 MAE
 
@@ -153,9 +160,12 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 - [[LASTED](http://arxiv.org/abs/2305.13800)]:Generalizable Synthetic Image Detection via Language-guided Contrastive Learning[[code](https://github.com/HighwayWu/LASTED)]
 
-  - 词汇：heightened, malevolent, dissemination, authenticity, forensic,speculate
-  - augment the training images with carefully-designed textual labels
-  - <font color=red>language supervision</font>，有点prompt engineer的感觉，<font color=red>但却说明指定图像的类型是有必要的</font>>
+  ![](./figs/lasted.png)
+  
+  - 词汇：heightened, malevolent, dissemination, authenticity, forensic,speculate, aforementioned, disseminated
+  - 训练阶段对齐预定义的文本特征：augment the training images with carefully-designed textual labels
+  - 测试阶段使用anchor representation
+  - <font color=red>language supervision</font>，有点prompt engineer的感觉，<font color=red>但却说明指定图像的类型是有必要的</font>
 
 #### 2.1.3 MAE
 
