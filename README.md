@@ -127,6 +127,17 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 - [[HiFi-IFDL](https://arxiv.org/abs/2303.17111)]Hierarchical Fine-Grained Image Forgery Detection and Localization.[[code](https://github.com/CHELSEA234/HiFi_IFDL)]
 
+  ![](./figs/ifdl.png)
+
+
+  - first represent forgery attributes of a manipulated image with multiple labels at different levels
+
+    ![](./figs/ifdl-ml.png)
+
+  - perform fine-grained classification at these levels using the hierarchical dependency between them
+
+  - the localization module employs the self-attention mechanism
+
   
 
 #### 2.1.3 MAE
@@ -165,7 +176,7 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
   - 词汇：heightened, malevolent, dissemination, authenticity, forensic,speculate, aforementioned, disseminated
   - 训练阶段对齐预定义的文本特征：augment the training images with carefully-designed textual labels
   - 测试阶段使用anchor representation
-  - <font color=red>language supervision</font>，有点prompt engineer的感觉，<font color=red>但却说明指定图像的类型是有必要的</font>
+  - <font color=red>language supervision</font>，有点prompt engineer的感觉，<font color=red>但却说明指定图像的类型是有必要的</font>，另外只针对detection来做，数据多样性不足（无mixture）
 
 #### 2.1.3 MAE
 
