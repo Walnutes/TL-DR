@@ -105,10 +105,22 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 
 - [[Castiling-ViT](https://openaccess.thecvf.com/content/CVPR2023/papers/You_Castling-ViT_Compressing_Self-Attention_via_Switching_Towards_Linear-Angular_Attention_at_Vision_CVPR_2023_paper.pdf)] Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference. [[code](https://www.haoranyou.com/castling-vit/)]
+  
   - Linear-Angular Attention to measuring spectral similarity
+  
 - [[HGFormer](https://openaccess.thecvf.com/content/CVPR2023/papers/Ding_HGFormer_Hierarchical_Grouping_Transformer_for_Domain_Generalized_Semantic_Segmentation_CVPR_2023_paper.pdf)]Hierarchical Grouping Transformer for Domain Generalized Semantic Segmentation [[code](https://github.com/dingjiansw101/HGFormer)]
+
 - [[Token Labeling](https://proceedings.neurips.cc/paper/2021/hash/9a49a25d845a483fae4be7e341368e36-Abstract.html)]All Tokens Matter: Token Labeling for Training Better Vision Transformers[[code](https://github.com/zihangJiang/TokenLabeling)]
+
 - [[MAGVIT](https://arxiv.org/abs/2212.05199)] Masked Generative Video Transformer. [[code](https://github.com/google-research/magvit)]
+
+- [[ResFormer](https://arxiv.org/abs/2212.00776)]: Scaling ViTs with Multi-Resolution Training[[code](https://github.com/ruitian12/resformer)]
+
+
+  - 词汇积累：plummets, discrepancy
+  - 
+
+  
 
 ---
 
@@ -130,13 +142,13 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
   ![](./figs/ifdl.png)
 
 
-  - first represent forgery attributes of a manipulated image with multiple labels at different levels
+  - 首先通过LoG得到频域特征，一同送入多尺度提取模块来对判别树进行搜索
 
     ![](./figs/ifdl-ml.png)
 
-  - perform fine-grained classification at these levels using the hierarchical dependency between them
+  - 定位则通过分辨率最高的特征图进行自注意力计算后得到，损失函数与LASTED相似，都是寻找训练集中的锚点，本论文还额外增加了一个裕量
 
-  - the localization module employs the self-attention mechanism
+  - 层次的结构之间含有依赖关系，通过scale的方式来强制学习这一信息，<font color=red>本质上是条件概率</font>。
 
   
 
@@ -175,7 +187,7 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
   
   - 词汇：heightened, malevolent, dissemination, authenticity, forensic,speculate, aforementioned, disseminated
   - 训练阶段对齐预定义的文本特征：augment the training images with carefully-designed textual labels
-  - 测试阶段使用anchor representation
+  - 测试阶段使用anchor representation进行判别
   - <font color=red>language supervision</font>，有点prompt engineer的感觉，<font color=red>但却说明指定图像的类型是有必要的</font>，另外只针对detection来做，数据多样性不足（无mixture）
 
 #### 2.1.3 MAE
