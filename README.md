@@ -106,7 +106,7 @@
 
 - 
 
-## 2. Special Issue on `Awesome-LMM4Vision`
+## 2. Workshop on `Awesome-LMM4Vision`
 
 ### 2.1 Rethinking
 
