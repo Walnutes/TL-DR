@@ -119,7 +119,18 @@
     - 词汇积累：plummets, discrepancy
 
 - [[U-ViT](https://arxiv.org/abs/2209.12152)]：All are Worth Words: A ViT Backbone for Diffusion Models [[code](https://github.com/baofff/U-ViT)]
+
   - Diffusion + ViT
+  - 暴力的把U-Net换为ViT
+
+  ![](./figs/U-Vit.png)
+
+- [[UniDiffuser](https://arxiv.org/abs/2302.10586)]：One Transformer Fits All Distributions in Multi-Modal Diffusion at Scale [[code](https://github.com/thu-ml/unidiffuser)]
+
+  - 文本-图像通过transformer统一
+  - 两篇文章就这样出来了
+
+![](./figs/Uni-Diffuser.png)
 
   
 
