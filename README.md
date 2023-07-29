@@ -1,6 +1,6 @@
 # Collections of Paper Focused on LMM4Vision or ViTs.
 
-Warmly welcome anyone to open issues or pull requests (recommended):hugs:
+
 
 [TOC]
 
@@ -116,9 +116,8 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 
 - [[ResFormer](https://arxiv.org/abs/2212.00776)]: Scaling ViTs with Multi-Resolution Training[[code](https://github.com/ruitian12/resformer)]
 
-
-  - 词汇积累：plummets, discrepancy
-  - 
+    - 词汇积累：plummets, discrepancy
+    - 
 
   
 
@@ -159,6 +158,10 @@ Warmly welcome anyone to open issues or pull requests (recommended):hugs:
 ### 2.2 Preprint
 
 #### 2.1.1 Vision Transformer
+
+- [[RetNet](https://arxiv.org/abs/2307.08621)]:A Successor to Transformer for Large Language Models[[code](https://github.com/microsoft/unilm)]
+- [[SPViT](https://arxiv.org/abs/2111.11802)]: Pruning Self-attentions into Convolutional Layers in Single Path[[code](https://github.com/ziplab/SPViT)]
+- 
 
 #### 2.1.2 Forgery
 
