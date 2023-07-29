@@ -110,14 +110,16 @@
   
 - [[HGFormer](https://openaccess.thecvf.com/content/CVPR2023/papers/Ding_HGFormer_Hierarchical_Grouping_Transformer_for_Domain_Generalized_Semantic_Segmentation_CVPR_2023_paper.pdf)]Hierarchical Grouping Transformer for Domain Generalized Semantic Segmentation [[code](https://github.com/dingjiansw101/HGFormer)]
 
-- [[Token Labeling](https://proceedings.neurips.cc/paper/2021/hash/9a49a25d845a483fae4be7e341368e36-Abstract.html)]All Tokens Matter: Token Labeling for Training Better Vision Transformers[[code](https://github.com/zihangJiang/TokenLabeling)]
+- [[Token Labeling](https://proceedings.neurips.cc/paper/2021/hash/9a49a25d845a483fae4be7e341368e36-Abstract.html)]：All Tokens Matter: Token Labeling for Training Better Vision Transformers[[code](https://github.com/zihangJiang/TokenLabeling)]
 
-- [[MAGVIT](https://arxiv.org/abs/2212.05199)] Masked Generative Video Transformer. [[code](https://github.com/google-research/magvit)]
+- [[MAGVIT](https://arxiv.org/abs/2212.05199)]：Masked Generative Video Transformer. [[code](https://github.com/google-research/magvit)]
 
 - [[ResFormer](https://arxiv.org/abs/2212.00776)]: Scaling ViTs with Multi-Resolution Training[[code](https://github.com/ruitian12/resformer)]
 
     - 词汇积累：plummets, discrepancy
-    - 
+
+- [[U-ViT](https://arxiv.org/abs/2209.12152)]：All are Worth Words: A ViT Backbone for Diffusion Models [[code](https://github.com/baofff/U-ViT)]
+  - Diffusion + ViT
 
   
 
