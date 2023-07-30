@@ -11,11 +11,15 @@
 
 - [[RetNet](https://arxiv.org/abs/2307.08621)]:A Successor to Transformer for Large Language Models[[code](https://github.com/microsoft/unilm)]
 
+
+  - 【并行训练、高性能、线性复杂度】不可能三角的统一
+
 - [[SPViT](https://arxiv.org/abs/2111.11802)]: Pruning Self-attentions into Convolutional Layers in Single Path[[code](https://github.com/ziplab/SPViT)]
 
 - [[Castiling-ViT](https://openaccess.thecvf.com/content/CVPR2023/papers/You_Castling-ViT_Compressing_Self-Attention_via_Switching_Towards_Linear-Angular_Attention_at_Vision_CVPR_2023_paper.pdf)] Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference. [[code](https://www.haoranyou.com/castling-vit/)]
 
   - Linear-Angular Attention to measuring spectral similarity
+  - 相似度考虑了向量内积的模长，夹角的信息也可以利用起来
 
 - [[HGFormer](https://openaccess.thecvf.com/content/CVPR2023/papers/Ding_HGFormer_Hierarchical_Grouping_Transformer_for_Domain_Generalized_Semantic_Segmentation_CVPR_2023_paper.pdf)]Hierarchical Grouping Transformer for Domain Generalized Semantic Segmentation [[code](https://github.com/dingjiansw101/HGFormer)]
 
@@ -26,6 +30,12 @@
 - [[ResFormer](https://arxiv.org/abs/2212.00776)]: Scaling ViTs with Multi-Resolution Training[[code](https://github.com/ruitian12/resformer)]
 
   - 词汇积累：plummets, discrepancy
+  - 多尺寸像素图像联合训练
+
+- [[Semiformer](http://arxiv.org/abs/2111.11067)]：Semi-Supervised Vision Transformers[[code](https://github.com/wengzejia1/Semiformer)]
+
+
+  - 半监督伪标签的生成也可以同时结合Conv和ViT
 
 - [[U-ViT](https://arxiv.org/abs/2209.12152)]：All are Worth Words: A ViT Backbone for Diffusion Models [[code](https://github.com/baofff/U-ViT)]
 
@@ -97,10 +107,11 @@
 
 
     - 定位则通过分辨率最高的特征图进行自注意力计算后得到，损失函数与LASTED相似，都是寻找训练集中的锚点，本论文还额外增加了一个裕量
-
+    
     - 层次的结构之间含有依赖关系，通过scale的方式来强制学习这一信息，<font color=red>本质上是条件概率</font>。
 
   
+
 
 ### 1.3 CLIP
 
