@@ -37,6 +37,11 @@
 
   - 半监督伪标签的生成也可以同时结合Conv和ViT
 
+- [[ASCEND](https://arxiv.org/pdf/2212.13771.pdf)]：Exploring Vision Transformers as Diffusion Learners[code]
+
+
+  - 与下面一篇及其相似，更改为了reshape-first
+
 - [[U-ViT](https://arxiv.org/abs/2209.12152)]：All are Worth Words: A ViT Backbone for Diffusion Models [[code](https://github.com/baofff/U-ViT)]
 
   - Diffusion + ViT
@@ -112,8 +117,11 @@
 
   
 
+### 1.3 MAEs
 
-### 1.3 CLIP
+- [[Point-M2AE](http://arxiv.org/abs/2205.14401)]: Point-M2AE: Multi-scale Masked Autoencoders for Hierarchical Point Cloud Pre-training[[code](https://github.com/ZrrSkywalker/Point-M2AE)]
+
+### 1.4 CLIP
 
 - 
 
