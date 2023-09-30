@@ -17,10 +17,9 @@
 - [[SPViT](https://arxiv.org/abs/2111.11802)]: Pruning Self-attentions into Convolutional Layers in Single Path[[code](https://github.com/ziplab/SPViT)]
 
 - [[Castiling-ViT](https://openaccess.thecvf.com/content/CVPR2023/papers/You_Castling-ViT_Compressing_Self-Attention_via_Switching_Towards_Linear-Angular_Attention_at_Vision_CVPR_2023_paper.pdf)] Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference. [[code](https://www.haoranyou.com/castling-vit/)]
-
-  - Linear-Angular Attention to measuring spectral similarity
+- Linear-Angular Attention to measuring spectral similarity
   - 相似度考虑了向量内积的模长，夹角的信息也可以利用起来
-
+  
 - [[HGFormer](https://openaccess.thecvf.com/content/CVPR2023/papers/Ding_HGFormer_Hierarchical_Grouping_Transformer_for_Domain_Generalized_Semantic_Segmentation_CVPR_2023_paper.pdf)]Hierarchical Grouping Transformer for Domain Generalized Semantic Segmentation [[code](https://github.com/dingjiansw101/HGFormer)]
 
 - [[Token Labeling](https://proceedings.neurips.cc/paper/2021/hash/9a49a25d845a483fae4be7e341368e36-Abstract.html)]：All Tokens Matter: Token Labeling for Training Better Vision Transformers[[code](https://github.com/zihangJiang/TokenLabeling)]
@@ -28,10 +27,9 @@
 - [[MAGVIT](https://arxiv.org/abs/2212.05199)]：Masked Generative Video Transformer. [[code](https://github.com/google-research/magvit)]
 
 - [[ResFormer](https://arxiv.org/abs/2212.00776)]: Scaling ViTs with Multi-Resolution Training[[code](https://github.com/ruitian12/resformer)]
-
-  - 词汇积累：plummets, discrepancy
+- 词汇积累：plummets, discrepancy
   - 多尺寸像素图像联合训练
-
+  
 - [[Semiformer](http://arxiv.org/abs/2111.11067)]：Semi-Supervised Vision Transformers[[code](https://github.com/wengzejia1/Semiformer)]
 
 
@@ -117,12 +115,28 @@
 
   
 
+
+
 ### 1.3 MAEs
 
 - [[Point-M2AE](http://arxiv.org/abs/2205.14401)]: Point-M2AE: Multi-scale Masked Autoencoders for Hierarchical Point Cloud Pre-training[[code](https://github.com/ZrrSkywalker/Point-M2AE)]
+  - U-Net + MAE：对不同尺度的点云进行
+- [[DMAE](http://arxiv.org/abs/2208.12256)]Masked Autoencoders Enable Efficient Knowledge Distillers[[code](https://github.com/UCSC-VLAA/DMAE)]
+  - 利用预训练的teacher model对student model提取的中间特征进行蒸馏
 
 ### 1.4 CLIP
 
+- [[MVP](https://arxiv.org/abs/2203.05175)]Multimodality-guided Visual Pre-training[code]
+
+### 1.5 Lite
+
+- [[FINCH](http://arxiv.org/abs/1902.11266)]Efficient Parameter-free Clustering Using First Neighbor Relations[[code](https://github.com/ssarfraz/FINCH-Clustering)]
+
+### 1.6 SSL
+
+- [[MaskFeat](https://arxiv.org/abs/2112.09133)]Masked Feature Prediction for Self-Supervised Visual Pre-Training[code]
+  - Image/Video
+  - 预测像素->预测特征：HOG + local contrast normalization，参考[DMAE](http://arxiv.org/abs/2208.12256)，利用特征进行蒸馏。
 - 
 
 ## 2. Workshop on `Awesome-LMM4Vision`
