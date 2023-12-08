@@ -1,5 +1,4 @@
-# Too Long; Don't Read.
-# A Paper List of [Mingrui CHEN](https://github.com/Walnutes/TL-DR)
+# Paper List of [Mingrui CHEN](https://github.com/Walnutes/TL-DR)
 
 Topics:
 - Learning
